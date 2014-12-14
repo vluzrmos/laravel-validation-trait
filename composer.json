@@ -1,6 +1,7 @@
 {
     "name": "vluzrmos/validation-trait",
-    "description": "",
+    "description": "Validation Trait to Laravel",
+    
     "authors": [
         {
             "name": "Vagner Luz do Carmo",
