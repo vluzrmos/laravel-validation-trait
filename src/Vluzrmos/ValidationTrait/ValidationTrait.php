@@ -1,6 +1,6 @@
 <?php namespace Vluzrmos\ValidationTrait;
 
-use Illuminate\Validation\Validator;
+use Illuminate\Support\Facades\App;
 
 trait ValidationTrait{
 	protected $errors   = null;
@@ -10,7 +10,9 @@ trait ValidationTrait{
 	}
 
 	public function validate(){
-		$this->errors = Validator::make(
+		$validator = App::make("validator");
+
+		$this->errors = $validator->make(
       $this->getAttributes(), 
       $this->getValidationRules(), 
       $this->getValidationMessages(), 
