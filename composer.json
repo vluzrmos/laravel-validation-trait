@@ -2,7 +2,8 @@
     "name": "vluzrmos/validation-trait",
     "description": "Validation Trait to Laravel",
     "license":"GNU GPL 3.0",
-    
+    "keywords":"Laravel, Validation, Trait",
+
     "authors": [
         {
             "name": "Vagner Luz do Carmo",
