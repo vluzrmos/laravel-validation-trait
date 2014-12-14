@@ -1,0 +1,22 @@
+{
+    "name": "vluzrmos/validation-trait",
+    "description": "",
+    "authors": [
+        {
+            "name": "Vagner Luz do Carmo",
+            "email": "vluzrmos@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "illuminate/validation":"4.2.*",
+        "illuminate/foundation":"4.2.*",
+    },
+    "autoload": {
+        "psr-0": {
+            "Vluzrmos\\ValidationTrait": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
