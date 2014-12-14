@@ -40,7 +40,7 @@ class User extends Eloquent{
   
 }
 ```
-Agora, quando for criar/salvar uma instancia do model que não atenda aos requisitos cadastrados
+Agora, quando for criar/salvar uma instancia do model que não atenda aos requisitos em  $rules, o save() retornará false:
 ```php
 $user = new User();
 $user->username = "";
