@@ -32,10 +32,11 @@ trait ValidationTrait{
 
 	public function getValidationRules(){
 		$rules = isset($this->rules) ? $this->rules : [];
+		$table = $this->getTable();
 
 		//Configurando a regra unique
 		foreach($rules as $i => &$rule){
-			$rule = str_replace("unique", "unique:".$this->getTable().",{$i}".(isset($this->id)? ",".$this->id:""), $rule);
+			$rule = str_replace("unique", "unique:".$table.",{$i}".(isset($this->id)? ",".$this->id:""), $rule);
 		}
 
 		return $rules;
