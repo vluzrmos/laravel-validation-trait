@@ -8,7 +8,7 @@ Instalação
 
 Adicione ao composer
 ```
-composer require vluzrmos/validation-trait dev-master
+composer require vluzrmos/validation-trait 1.0
 ```
 
 Adicione à lista de services providers em app/app.php
