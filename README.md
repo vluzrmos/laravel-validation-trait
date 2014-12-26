@@ -31,7 +31,7 @@ class User extends Eloquent{
   use ValidationTrait;
   
   $rules = [
-    "username" => "required|unique",
+    "username" => "required|unique", //Somente "unique" 
     "password" => "required|min:6"
   ];
   
@@ -45,7 +45,9 @@ class User extends Eloquent{
 Agora, quando for criar/salvar uma instancia do model que não atenda aos requisitos em  $rules, o save() retornará false:
 ```php
 $user = new User();
-$user->username = "";
+
+$user->username = Input::get("username");
+$user->password = Input::get("password");
 
 if($user->save()){
   Session::flash("success", "Salvou com sucesso");
@@ -55,5 +57,8 @@ else{
   return Redirect::back()->withInput()->withErrors($user->getErrors());
 }
 ```
+
+O ValidationTrait adiciona automaticamente os campos id e deleted_at às validações "unique",
+então, basta fazer "field" => "required|unique", que automaticamente, no momento da validação, será modificado para "unique:table_name,field,{id|null},id,{deleted_at_column},NULL".
 
 Mais opções de validação em [Laravel Validation Rules](http://laravel.com/docs/4.2/validation#available-validation-rules).
