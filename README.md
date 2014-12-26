@@ -1,7 +1,9 @@
 Laravel ValidationTrait
 =======================
 
-Facilitador para validação de models no Laravel 4.2
+Simples facilitador para validação de models no Laravel 4.2.
+
+Se procura um package mais completo, considere utilizar o [watson/validating](https://github.com/dwightwatson/validating)
 
 Instalação
 =
@@ -46,17 +48,11 @@ $user = new User();
 $user->username = "";
 
 if($user->save()){
-  dd("OK, salvou");
+  Session::flash("success", "Salvou com sucesso");
+  return Redirect::to("home");
 }
 else{
-  dd($user->getErrors()); 
-  
-  /*
-    deve exibir:
-    [
-      "username" => "Nome de usuário obrigatório"
-    ]
-  */
+  return Redirect::back()->withInput()->withErrors($user->getErrors());
 }
 ```
 
