@@ -1,6 +1,8 @@
 Laravel ValidationTrait
 =======================
 
+[![Latest Stable Version](https://poser.pugx.org/vluzrmos/validation-trait/v/stable.svg)](https://packagist.org/packages/vluzrmos/validation-trait) [![Total Downloads](https://poser.pugx.org/vluzrmos/validation-trait/downloads.svg)](https://packagist.org/packages/vluzrmos/validation-trait) [![Latest Unstable Version](https://poser.pugx.org/vluzrmos/validation-trait/v/unstable.svg)](https://packagist.org/packages/vluzrmos/validation-trait) [![License](https://poser.pugx.org/vluzrmos/validation-trait/license.svg)](https://packagist.org/packages/vluzrmos/validation-trait)
+
 Simples facilitador para validação de models no Laravel 4.2.
 
 Se procura um package mais completo, considere utilizar o [watson/validating](https://github.com/dwightwatson/validating)
